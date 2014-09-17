@@ -63,7 +63,7 @@ func TestGet_returns_data(t *testing.T) {
 func TestGet_not_found_result_is_nil(t *testing.T) {
 	fixture := Get("test_fixtures", "Some Unknown Value")
 
-	assert.Equal(t, fixture.Exists, false)
+	assert.Equal(t, fixture.Found, false)
 	assert.Equal(t, fixture.Source, (*json.RawMessage)(nil))
 	assert.Equal(t, fixture.Source == nil, true)
 }

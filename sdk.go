@@ -20,7 +20,7 @@ type ElasticInsertResponse struct {
 }
 
 type ElasticGetResponse struct {
-	Exists    bool `json:"exists"`
+	Found    bool `json:"found"`
 	Source 	*json.RawMessage `json:"_source"`
 
 	Index 	string `json:"_index"`
